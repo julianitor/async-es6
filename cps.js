@@ -28,7 +28,7 @@ function resolveAsyncValues(valuesArray, cb) {
 
 }
 
-function run() {
+function go() {
   //lets mock some simple values
   var valuesArray = [1, 2 , 3, 4, 5, 6, 7];
   resolveAsyncValues(valuesArray, function(asyncValues) {
@@ -38,5 +38,4 @@ function run() {
 }
 
 //go!
-run();
-
+go();

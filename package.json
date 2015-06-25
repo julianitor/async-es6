@@ -1,0 +1,25 @@
+{
+  "name": "async-es6",
+  "version": "0.0.0",
+  "description": "Code of async JS, from CPS to generators",
+  "main": "cps.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/julianitor/async-es6.git"
+  },
+  "keywords": [
+    "es6"
+  ],
+  "author": "julianitor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianitor/async-es6/issues"
+  },
+  "homepage": "https://github.com/julianitor/async-es6",
+  "dependencies": {
+    "q": "^1.4.1"
+  }
+}
