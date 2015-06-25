@@ -20,12 +20,12 @@ function resolveAsyncValues(valuesArray, cb) {
   var myCb = nTimes(valuesArray.length, cb.bind(null, acc))
   //now we dont want cb to be called until we get all results from async ops
   for(var i = valuesArray.length; i--;) {
-    getAsyncValue(i, i*100, function(asyncValue) {
+    var v = valuesArray[i];
+    getAsyncValue(v, v*100, function(asyncValue) {
       acc.push(asyncValue);
       myCb();
     })
   }
-
 }
 
 function go() {

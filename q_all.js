@@ -11,7 +11,7 @@ function getAsyncValuePromise(initVal, delay) {
 //this function also return a promise, which will be resolved when all promises have been resolved
 function resolveAsyncValues(valuesArray) {
   var promises = [].map.call(valuesArray, function(v, k) {
-    return getAsyncValuePromise(k, k*100);
+    return getAsyncValuePromise(v, v*100);
   });
   return Q.all(promises);
 }
