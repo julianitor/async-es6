@@ -1,9 +1,3 @@
-//mock an asyncValue function that returns transformed initial value initVal after delay ms as parameter in callback
-function getAsyncValue(initVal, delay, cb) {
-  delay = parseInt(delay, 10);
-  setTimeout(cb.bind(null, initVal*2), delay);
-};
-
 //function that returns function, called n times will call cb
 function nTimes(n, cb) {
   //n and cb get clausured
@@ -11,6 +5,12 @@ function nTimes(n, cb) {
     if (--n === 0) cb();
   }
 }
+
+//mock an asyncValue function that returns transformed initial value initVal after delay ms as parameter in callback
+function getAsyncValue(initVal, delay, cb) {
+  delay = parseInt(delay, 10);
+  setTimeout(cb.bind(null, initVal*2), delay);
+};
 
 //function that tries to call a callback function after all async values has been resolved
 function resolveAsyncValues(valuesArray, cb) {
